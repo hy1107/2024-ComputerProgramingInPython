@@ -22,8 +22,8 @@
 - 主題一：存股股票程式分析
   - 篩選條件：每年發放股利；股利波動度 < 30%；殖利率 > 6% 便宜價：殖利率 >= 7%；昂貴價：殖利率 <= 4% (股利以五年平均計算)
 - 主題二：預測飆股
-  1.單月營收年成長率>30%。
-  2.突破3個月以上的區間箱型整理。
+  1.單月營收年成長率>30% </br>
+  2.突破3個月以上的區間箱型整理
 
 ### 成果展示
 - [報告用PPT](https://www.canva.com/design/DAGCBGLDC90/1TrzQfKHWJiNC0_z26-lcw/edit?utm_content=DAGCBGLDC90&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)</br>

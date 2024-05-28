@@ -1,4 +1,5 @@
 # 2024-ComputerProgramingInPython
+## 小組
 | 姓名 | 學號 | 工作內容 |
 |-------|-------|-------|
 | 鄭楊叡 | 111481004 | 組長、後端 |
@@ -10,4 +11,5 @@
 | 周詠霖 | 112421059 | HTML、串接api |
 | 蔡承洋 | 112421063 | HTML、串接api |
 
+## 成果展示
 [系統DEMO影片](https://www.youtube.com/watch?v=X-0GFfpIMTc)

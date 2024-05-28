@@ -14,6 +14,7 @@
 ## 學期間小組競賽
 - 參加Kaggle競賽
   - 預測2024年男子和女子大學籃球錦標賽的結果
+  - 現為319名（曾達到世界第ㄧ名）
   - [March Machine Learning Mania 2024](https://www.kaggle.com/competitions/march-machine-learning-mania-2024)
 
 ## 成果展示

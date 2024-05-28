@@ -12,7 +12,8 @@
 | 蔡承洋 | 112421063 | HTML、串接api |
 
 ## 學期間小組競賽
-- [March Machine Learning Mania 2024](https://www.kaggle.com/competitions/march-machine-learning-mania-2024)
+- 參加Kaggle競賽
+  - [March Machine Learning Mania 2024](https://www.kaggle.com/competitions/march-machine-learning-mania-2024)
 ## 成果展示
 - [報告用PPT](https://www.canva.com/design/DAGCBGLDC90/1TrzQfKHWJiNC0_z26-lcw/edit?utm_content=DAGCBGLDC90&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)</br>
 - [系統DEMO影片](https://www.youtube.com/watch?v=X-0GFfpIMTc)

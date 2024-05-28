@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>投資基金績效概覽</title>
+<style>
+    body { 
+        font-family: Arial, sans-serif; 
+        margin: 0; 
+        padding: 0; 
+        overflow-x: hidden; 
+    }
+    .header {
+        background-color: #4A90E2; 
+        padding: 20px 0; 
+        text-align: center; 
+        color: white; 
+        font-size: 24px;
+    }
+    .container { 
+        display: flex; 
+        justify-content: center; 
+        padding: 40px; 
+        background-color: white;
+    }
+    .card {
+        background-color: #f0f8ff; /* 淡藍色背景 */
+        border-radius: 10px; /* 圓角邊框 */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
+        font-family: Arial, sans-serif; /* 字體 */
+        margin: 20px; /* 外邊距 */
+        padding: 20px; /* 內邊距 */
+        width: 600px; /* 卡片寬度 */
+        text-align: center; /* 文字居中 */
+    }
+    .title {
+        color: #333; /* 深灰色文字 */
+        font-size: 36px; /* 標題字體大小 */
+        margin-bottom: 10px; /* 標題下的間距 */
+    }
+
+    .description {
+        color: #666; /* 中灰色文字 */
+        font-size: 24px; /* 描述文字大小 */
+        margin-bottom: 20px; /* 描述下的間距 */
+    }
+
+    .performance-graph {
+        border-top: 2px dashed #ccc; /* 中間的虛線 */
+        padding-top: 20px; /* 虛線上方的間距 */
+        margin-top: 20px; /* 虛線和上面內容的間距 */
+    }
+    .growth {
+        color: green; /* 增長率的顏色 */
+        font-size: 20px; /* 增長率字體大小 */
+        margin: 10px 0; /* 增長率周圍的間距 */
+    }
+    .button {
+        background-color: #ffffff; /* 按鈕背景顏色 */
+        color: #4A90E2; /* 按鈕文字顏色 */
+        border: #4A90E2; /* 無邊框 */
+        border-radius: 5px; /* 按鈕圓角 */
+        padding: 20px 60px; /* 按鈕內邊距 */
+        font-size: 24px; /* 按鈕文字大小 */
+        cursor: pointer; /* 滑鼠懸停指標 */
+        margin-top: 20px; /* 按鈕和上面內容的間距 */
+        width: 400px;
+    }
+    .large-text {
+        font-size: 80px; 
+    }
+    .middle-text{
+        font-size: 40px;
+    }
+</style>
+</head>
+<body>
+<div class="header">
+    <p class="large-text">適合你的選股策略都在這</p>
+    <p class="middle-text">喜歡績優股？還是轉機股？無論你的偏好是什麼，這裡都有適合你的選股策略</p>
+    <p></p>
+</div>
+<div class="container">
+    <div class="card">
+        <div class="title">存股清單</div>
+        <div class="description">每天為你篩選高自由現金流，價格合理的績優股清單</div>
+        <div class="performance-graph"></div>
+        <div>2003-2024平均年報酬率</div>
+        <div class="growth">+16.07%</div>
+        <a href="http://127.0.0.1:5000/2"><button class="button">查看選股結果</button></a>
+    </div>
+    <div class="card">
+        <div class="title">預測飆股</div>
+        <div class="description">每天分析經濟預測數據，擬定投資的最佳入場時機</div>
+        <div class="performance-graph"></div>
+        <div>2003-2024平均年報酬率</div>
+        <div class="growth">+15.81%</div>
+        <a href="http://127.0.0.1:5000/"><button class="button">查看預測飆股</button></a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background: linear-gradient(to top left, #5170de, #61bcc3);
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            font-size: 25px;
+            text-align: center;
+        }
+        .navigation {
+            background: linear-gradient(to top left, #5170de, #61bcc3);
+            padding: 10px;
+            text-align: center;
+        }
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            margin-left: 80px;
+            margin-right: 80px;
+            letter-spacing: 2px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative; /* For positioning the pseudo-elements */
+        }
+        .navigation a:hover, .navigation a:focus {
+            background-color: rgba(255, 255, 255, 0.1); /* Light white overlay */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Shadow for "lifting" effect */
+        }
+        .navigation a:focus::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background-color: white; /* White line under the button */
+        }
+        .navigation a i {
+            margin-right: 5px; /* Space between icon and text */
+            color: white; /* Icon color */
+        }
+        .main-content {
+            padding: 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .title { /* 更新樣式規則 */
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .bigger-text { /* 更新樣式規則 */
+            font-size: 24px;
+        }
+        .big-text { /* 更新樣式規則 */
+            font-size: 22px;
+        }
+        .footer {
+            padding: 10px;
+            background: linear-gradient(to top left, #5170de, #61bcc3);
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>投資標的：存股股票清單</h1>
+        <p>存股為透過買進股票後長期持有，靠公司發放的現金股利創造現金流</p>以下將提供穩定成長與配息的存股清單，作為您長期投資的決策考量</p>
+    </div>
+    <div class="navigation">
+        <a href="#"><i class="fa-solid fa-list"></i>今日存股篩選</a>
+        <a href="#" class="button"><i class="fa-solid fa-filter-circle-dollar"></i>存股篩選條件</a>
+        <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>查看過去選出的存股</a>
+    </div>
+    <div class="main-content">
+        <p class="title">以下為存股的篩選條件:</p>
+        <p class="bigger-text">1.每年發放股利</p>
+        <p class="big-text">2.股利波動度<30%</p>
+        <p class="big-text">3.殖利率>6%</p>
+    </div>
+    <div class="footer">
+        <p>© 2024 您的理財服務。保留所有權利。</p>
+    </div>
+</body>
+</html>

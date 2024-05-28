@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background: linear-gradient(to top left, #5170de, #61bcc3);
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            font-size: 25px;
+            text-align: center;
+        }
+        .navigation {
+            background: linear-gradient(to top left, #5170de, #61bcc3);
+            padding: 10px;
+            text-align: center;
+        }
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            margin-left: 80px;
+            margin-right: 80px;
+            letter-spacing: 2px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative; /* For positioning the pseudo-elements */
+        }
+        .navigation a:hover, .navigation a:focus {
+            background-color: rgba(255, 255, 255, 0.1); /* Light white overlay */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Shadow for "lifting" effect */
+        }
+        .navigation a:focus::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background-color: white; /* White line under the button */
+        }
+        .navigation a i {
+            margin-right: 5px; /* Space between icon and text */
+            color: white; /* Icon color */
+        }
+        .main-content {
+            padding: 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .title { /* 更新樣式規則 */
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .bigger-text { /* 更新樣式規則 */
+            font-size: 24px;
+        }
+        .big-text { /* 更新樣式規則 */
+            font-size: 22px;
+        }
+        .footer {
+            padding: 10px;
+            background: linear-gradient(to top left, #5170de, #61bcc3);
+            text-align: center;
+            color: white;
+        }
+        th {
+            background: #61bcc3;
+            color: white;
+        }
+</style>
+
+</head>
+<body>
+    <div class="header">
+        <h1>預測飆股</h1>
+        <p>每天為你篩選財務好轉、價格划算的飆股清單</p>
+    </div>
+    <div class="navigation">
+        <a href="http://127.0.0.1:5000/2"><i class="fa-solid fa-list"></i>今日存股篩選</a>
+        <a href="http://127.0.0.1:5000/3" class="button"><i class="fa-solid fa-filter-circle-dollar"></i>首頁</a>
+        <a href="http://127.0.0.1:5000/"><i class="fa-solid fa-clock-rotate-left"></i>今日飆股篩選</a>
+    </div>
+    <div class="main-content">
+        <p>根據今日最新財務數據篩選後，下面為符合預測飆股篩選條件的公司排行，此排行榜在每天股價收盤後會自動更新:</p>
+        <div>
+            <button onclick="fetchScriptResult()">檢視排名</button>
+            <div id="results">結果將顯示在這裡</div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2024 您的理財服務。保留所有權利。</p>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function fetchScriptResult() {
+        fetch('/run_script')
+            .then(response => response.json())
+            .then(data => {
+                let table = '<style>table { width: 80%; border-collapse: collapse; margin: 20px auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background-color: #f8f8f8; } th, td { border: 1px solid #ddd; padding: 8px; text-align: left; } th { background-color: #4CAF50; color: white; } tr:nth-child(even) { background-color: #f2f2f2; } tr:hover { background-color: #ddd; }</style><table><tr><th>股票代碼</th><th>股票名稱</th><th>產業別</th><th>股價</th></tr>';
+                data.forEach(sublist => {
+                // 遍历子列表中的每个股票信息
+                    sublist.forEach(item => {
+                        table += `<tr>
+                                    <td>${item[0]}</td>
+                                    <td>${item[1]}</td>
+                                    <td>${item[2]}</td>
+                                    <td>${item[3]}</td>
+                                </tr>`;
+                    });
+                });
+                table += '</table>';
+                document.getElementById('results').innerHTML = table;  // 将表格插入到页面中
+            })
+            .catch(error => console.error('Error:', error));
+    }
+</script>
